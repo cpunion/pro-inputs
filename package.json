@@ -1,6 +1,6 @@
 {
   "name": "pro-inputs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dark-themed inputs for pro-sumerish looking content creationy apps",
   "main": "lib/index.js",
   "scripts": {
