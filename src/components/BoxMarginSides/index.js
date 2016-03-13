@@ -6,7 +6,7 @@ import {
   BOTTOM,
   LEFT,
   ALL_SIDES,
-} from '../../../constants/boxCorners';
+} from '../../constants/boxCorners';
 import sideAboveImage from '../../../assets/img/sideAbove.png';
 import sideAsideRightImage from '../../../assets/img/sideAsideRight.png';
 import sideBelowImage from '../../../assets/img/sideBelow.png';

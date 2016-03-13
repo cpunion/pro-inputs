@@ -6,7 +6,7 @@ import {
   BOTTOM_LEFT,
   TOP_LEFT,
   ALL_CORNERS,
-} from '../../../constants/boxCorners';
+} from '../../constants/boxCorners';
 import boxBorderCornerAllImage from '../../../assets/img/boxBorderCornerAll.png';
 import boxBorderCornerTopRightImage from '../../../assets/img/boxBorderCornerTopRight.png';
 import styles from './styles';
