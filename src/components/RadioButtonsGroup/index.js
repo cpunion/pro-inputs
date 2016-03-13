@@ -8,7 +8,7 @@ export default class RadioButtonsGroup extends Component {
     items: PropTypes.arrayOf(PropTypes.shape({
       image: PropTypes.element,
       text: PropTypes.string,
-      selectedValue: PropTypes.any,
+      value: PropTypes.any,
     })),
     style: View.propTypes.style,
     selectedValue: PropTypes.any,

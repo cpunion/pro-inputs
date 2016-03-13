@@ -1,15 +1,15 @@
 import React, { Component, Image, PropTypes, TouchableOpacity, View } from 'react-native';
 import { Set } from 'immutable';
+import {
+  TOP_RIGHT,
+  BOTTOM_RIGHT,
+  BOTTOM_LEFT,
+  TOP_LEFT,
+  ALL_CORNERS,
+} from '../../constants/boxCorners';
 import boxBorderCornerAllImage from '../../assets/img/boxBorderCornerAll.png';
 import boxBorderCornerTopRightImage from '../../assets/img/boxBorderCornerTopRight.png';
 import styles from './styles';
-
-// (Value constants)
-export const TOP_RIGHT = 'TOP_RIGHT';
-export const BOTTOM_RIGHT = 'BOTTOM_RIGHT';
-export const BOTTOM_LEFT = 'BOTTOM_LEFT';
-export const TOP_LEFT = 'TOP_LEFT';
-export const ALL_CORNERS = [TOP_RIGHT, BOTTOM_RIGHT, BOTTOM_LEFT, TOP_LEFT];
 
 // (Prop type constants)
 const cornerPropType = PropTypes.oneOf(ALL_CORNERS);

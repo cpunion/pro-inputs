@@ -1,22 +1,22 @@
 import React, { Component, Image, PropTypes, Text, TouchableOpacity, View } from 'react-native';
 import { Set } from 'immutable';
+import {
+  TOP,
+  RIGHT,
+  BOTTOM,
+  LEFT,
+  ALL_SIDES,
+} from '../../constants/boxCorners';
 import sideAboveImage from '../../assets/img/sideAbove.png';
 import sideAsideRightImage from '../../assets/img/sideAsideRight.png';
 import sideBelowImage from '../../assets/img/sideBelow.png';
 import sideAsideLeftImage from '../../assets/img/sideAsideLeft.png';
 import styles from './styles';
 
-// (Value constants)
-export const TOP = 'TOP';
-export const RIGHT = 'RIGHT';
-export const BOTTOM = 'BOTTOM';
-export const LEFT = 'LEFT';
-export const ALL_SIDES = [TOP, LEFT, BOTTOM, RIGHT];
-
 // (Prop type constants)
 const sidePropType = PropTypes.oneOf(ALL_SIDES);
 
-export default class BoxPaddingSides extends Component {
+export default class BoxMarginSides extends Component {
   static propTypes = {
     onChangeSelectedSides: PropTypes.func.isRequired,
     selectedSides: PropTypes.arrayOf(sidePropType).isRequired,
@@ -63,7 +63,7 @@ export default class BoxPaddingSides extends Component {
         style={buttonStyle}
       >
         <Text style={styles.allButtonLabel}>
-          Padding
+          Margin
         </Text>
       </TouchableOpacity>
     );
@@ -72,7 +72,7 @@ export default class BoxPaddingSides extends Component {
   renderTopButton() {
     return this.renderSideButton({
       side: TOP,
-      imageSource: sideBelowImage,
+      imageSource: sideAboveImage,
       imageStyle: styles.buttonVerticalImage,
       style: styles.buttonTop,
     });
@@ -81,7 +81,7 @@ export default class BoxPaddingSides extends Component {
   renderRightButton() {
     return this.renderSideButton({
       side: RIGHT,
-      imageSource: sideAsideLeftImage,
+      imageSource: sideAsideRightImage,
       imageStyle: styles.buttonHorizontalImage,
       style: styles.buttonRight,
     });
@@ -90,7 +90,7 @@ export default class BoxPaddingSides extends Component {
   renderBottomButton() {
     return this.renderSideButton({
       side: BOTTOM,
-      imageSource: sideAboveImage,
+      imageSource: sideBelowImage,
       imageStyle: styles.buttonVerticalImage,
       style: styles.buttonBottom,
     });
@@ -99,7 +99,7 @@ export default class BoxPaddingSides extends Component {
   renderLeftButton() {
     return this.renderSideButton({
       side: LEFT,
-      imageSource: sideAsideRightImage,
+      imageSource: sideAsideLeftImage,
       imageStyle: styles.buttonHorizontalImage,
       style: styles.buttonLeft,
     });

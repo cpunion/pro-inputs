@@ -1,12 +1,15 @@
-import BoxBorderCorners from './BoxBorderCorners';
-import BoxBorderSides from './BoxBorderSides';
-import BoxMarginSides from './BoxMarginSides';
-import BoxPaddingSides from './BoxPaddingSides';
-import CheckButtonsGroup from './CheckButtonsGroup';
-import ColorField from './ColorField';
-import NumberIncrementField from './NumberIncrementField';
-import Picker from './Picker';
-import RadioButtonsGroup from './RadioButtonsGroup';
+import BoxBorderCorners from './components/BoxBorderCorners';
+import BoxBorderSides from './components/BoxBorderSides';
+import BoxMarginSides from './components/BoxMarginSides';
+import BoxPaddingSides from './components/BoxPaddingSides';
+import CheckButtonsGroup from './components/CheckButtonsGroup';
+import ColorField from './components/ColorField';
+import NumberIncrementField from './components/NumberIncrementField';
+import Picker from './components/Picker';
+import RadioButtonsGroup from './components/RadioButtonsGroup';
+
+import * as boxCorners from './constants/boxCorners';
+import * as boxSides from './constants/boxSides';
 
 export {
   BoxBorderCorners,
@@ -18,4 +21,7 @@ export {
   NumberIncrementField,
   Picker,
   RadioButtonsGroup,
+
+  boxCorners,
+  boxSides,
 };
