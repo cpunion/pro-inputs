@@ -6,9 +6,9 @@ import {
   BOTTOM,
   LEFT,
   ALL_SIDES,
-} from '../../constants/boxCorners';
-import boxBorderSideAllImage from '../../assets/img/boxBorderSideAll.png';
-import boxBorderSideTopImage from '../../assets/img/boxBorderSideTop.png';
+} from '../../../constants/boxCorners';
+import boxBorderSideAllImage from '../../../assets/img/boxBorderSideAll.png';
+import boxBorderSideTopImage from '../../../assets/img/boxBorderSideTop.png';
 import styles from './styles';
 
 // (Prop type constants)
