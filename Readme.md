@@ -8,7 +8,7 @@ npm install --save pro-inputs
 
 
 ### Usage
-```
+```javascript
 import {
   BoxBorderCorners,
   BoxBorderSides,
