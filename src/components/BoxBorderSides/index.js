@@ -18,6 +18,7 @@ export default class BoxBorderSides extends Component {
   static propTypes = {
     onChangeSelectedSides: PropTypes.func.isRequired,
     selectedSides: PropTypes.arrayOf(sidePropType).isRequired,
+    style: View.propTypes.style,
   };
 
   static defaultProps = {
@@ -69,8 +70,10 @@ export default class BoxBorderSides extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         <View style={styles.row}>
           <View style={styles.emptyColumn}/>
           {this.renderButton({

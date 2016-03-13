@@ -5,6 +5,7 @@ export default class ColorField extends Component {
   static propTypes = {
     name: PropTypes.string,
     onChangeValue: PropTypes.func.isRequired,
+    style: View.propTypes.style,
     value: PropTypes.string,
   };
 
@@ -65,8 +66,10 @@ export default class ColorField extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         {this.renderName()}
         <View style={styles.fieldSection}>
           {this.renderColorChip()}

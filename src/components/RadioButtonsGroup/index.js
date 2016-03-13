@@ -10,8 +10,8 @@ export default class RadioButtonsGroup extends Component {
       text: PropTypes.string,
       value: PropTypes.any,
     })),
-    style: View.propTypes.style,
     selectedValue: PropTypes.any,
+    style: View.propTypes.style,
   };
 
   static defaultProps = {

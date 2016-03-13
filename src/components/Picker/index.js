@@ -147,8 +147,10 @@ export default class ProPicker extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         {this.renderNameSection()}
         {this.renderBodySection()}
       </View>

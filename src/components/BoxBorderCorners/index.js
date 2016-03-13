@@ -18,6 +18,7 @@ export default class BoxBorderCorners extends Component {
   static propTypes = {
     onChangeSelectedCorners: PropTypes.func.isRequired,
     selectedCorners: PropTypes.arrayOf(cornerPropType).isRequired,
+    style: View.propTypes.style,
   };
 
   static defaultProps = {
@@ -69,8 +70,10 @@ export default class BoxBorderCorners extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         <View style={styles.row}>
           {this.renderButton({
             corner: TOP_LEFT,

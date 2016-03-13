@@ -20,6 +20,7 @@ export default class BoxPaddingSides extends Component {
   static propTypes = {
     onChangeSelectedSides: PropTypes.func.isRequired,
     selectedSides: PropTypes.arrayOf(sidePropType).isRequired,
+    style: View.propTypes.style,
   };
 
   static defaultProps = {
@@ -126,8 +127,10 @@ export default class BoxPaddingSides extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         <View style={styles.row}>
           {this.renderTopButton()}
         </View>

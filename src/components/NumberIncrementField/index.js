@@ -9,6 +9,7 @@ export default class NumberIncrementField extends Component {
     name: PropTypes.string,
     onChangeValue: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
+    style: View.propTypes.style,
     unit: PropTypes.string,
     value: PropTypes.number,
   };
@@ -92,8 +93,10 @@ export default class NumberIncrementField extends Component {
   }
 
   render() {
+    const { style } = this.props;
+
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, style]}>
         {this.renderName()}
         <View style={styles.fieldSection}>
           {this.renderValue()}
